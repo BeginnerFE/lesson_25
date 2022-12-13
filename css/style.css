@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+/*font-family: 'Secular One', sans-serif;*/
+
+body {
+	font-family: 'Secular One';
+}
+
+[class*=__container] {
+	max-width: 1160px;
+	margin: 0 auto;
+	padding: 0px 30px 0px 30px;
+}
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.search-page {
+	padding: 200px 0px;
+}
+.search-page__container {
+	position: relative;
+	overflow: hidden;
+	height: 50px;
+}
+.search-page__title {
+	max-width: 1160px;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: 700;
+	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+.search-page__title:not(:last-child) {
+	margin-bottom: 50px;
+}
+.search-page__form {
+	top: -100%;
+	height: 100%;
+	position: absolute;
+	transition: all 0.3s ease 0s;
+	width: 100%;
+}
+._search-open .search-page__form {
+	top: 0;
+	transition: all 0.3s ease 0.3s;
+}
+
+
+
+.btn-open {
+	position: absolute;
+	top: 0;
+	transition: all 0.3s ease 0.3s;
+	outline: none;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background: url("../img/shape.svg") center / 35px no-repeat, rgba(205, 205, 205, 0);
+}
+._search-open .btn-open {
+	top: -100%;
+	transition: all 0.3s ease 0s;
+}
+.btn-open span {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+}
+
+.input {
+	width: 50%;
+	height: 100%;
+	border: 1px solid silver;
+	border-radius: 10px;
+	outline: none;
+	transition: all 0.3s ease 0s;
+	padding: 0 10px 0 50px;
+}
+.input:focus, .input:hover {
+	box-shadow: inset 0 0 5px silver;
+}
+.btn {
+	height: 100%;
+	background-color: silver;
+	padding: 0 20px;
+	border-radius: 10px;
+	transition: all 0.3s ease 0s;
+}
+.btn:hover {
+	background-color: rgb(123, 123, 123);
+	color: #FFFFFF;
+}
+.counter {
+	height: 80%;
+	width: 40px;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	display: flex;
+	flex-direction: column;
+	font-size: 10px;
+	text-align: center;
+}
+.counter span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	flex: 1 1 auto;
+	font-size: 20px;
+}
